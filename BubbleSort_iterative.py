@@ -16,9 +16,8 @@ def main():
                 aux=vet[j+1]
                 vet[j+1]=vet[j]
                 vet[j]=aux
-    
-    for i in range(tamanho):
-        print(vet[i])
+
+    print(vet[i])
 
 if __name__ == "__main__":
     main()
