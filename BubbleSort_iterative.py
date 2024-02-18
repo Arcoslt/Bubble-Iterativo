@@ -1,12 +1,13 @@
-from random import randint
+from random import sample
 
 def main():
     #Criação do vetor com tamanho desejado e com inteiros aleatórios
     tamanho = input('Tamanho do Vetor: ')
     tamanho = int(tamanho)
     vet = []
-    for i in range(tamanho):
-        vet.append(randint(1, tamanho))
+    #Sample não repete números, fica mais fácil a visualização dop Bubble
+    vet = sample(range(1, tamanho + 1), tamanho)
+    print("Vetor desordenado:",vet)
 
     #Bubble sort
     for i in range(tamanho-1):
@@ -17,7 +18,7 @@ def main():
                 vet[j+1]=vet[j]
                 vet[j]=aux
 
-    print(vet[i])
+    print("Vetor ordenado:",vet)
 
 if __name__ == "__main__":
     main()
